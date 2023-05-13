@@ -209,13 +209,13 @@ section {
   opacity: 0.5;
 }
 
-.scroll-down {
+.scroll-down-pg1 {
   position: absolute;
   bottom: 75px;
   right: 9%;
 }
 
-.scroll-down i {
+.scroll-down-pg1 i {
   display: block;
   padding: 15px;
   font-size: 25px;
@@ -225,21 +225,21 @@ section {
   transition: all 0.5s ease, opacity 0.22s ease;
 }
 
-.scroll-down i:hover {
+.scroll-down-pg1 i:hover {
   transform: translateY(-5px);
 }
 
-.scroll-down i:active {
+.scroll-down-pg1 i:active {
   opacity: 0.5;
 }
 
-.scroll-up {
+.scroll-up-pg2 {
   position: absolute;
   bottom: 150px;
   right: 9%;
 }
 
-.scroll-up i {
+.scroll-up-pg2 i {
   display: block;
   padding: 15px;
   font-size: 25px;
@@ -249,21 +249,21 @@ section {
   transition: all 0.5s ease, opacity 0.22s ease;
 }
 
-.scroll-up i:hover {
+.scroll-up-pg2 i:hover {
   transform: translateY(5px);
 }
 
-.scroll-up i:active {
+.scroll-up-pg2 i:active {
   opacity: 0.5;
 }
 
-.scroll-down-2 {
+.scroll-down-pg2 {
   position: absolute;
   bottom: 75px;
   right: 9%;
 }
 
-.scroll-down-2 i {
+.scroll-down-pg2 i {
   display: block;
   padding: 15px;
   font-size: 25px;
@@ -273,21 +273,21 @@ section {
   transition: all 0.5s ease, opacity 0.22s ease;
 }
 
-.scroll-down-2 i:hover {
+.scroll-down-pg2 i:hover {
   transform: translateY(-5px);
 }
 
-.scroll-down-2 i:active {
+.scroll-down-pg2 i:active {
   opacity: 0.5;
 }
 
-.scroll-up-2 {
+.scroll-up-pg3 {
   position: absolute;
   bottom: 150px;
   right: 9%;
 }
 
-.scroll-up-2 i {
+.scroll-up-pg3 i {
   display: block;
   padding: 15px;
   font-size: 25px;
@@ -297,21 +297,21 @@ section {
   transition: all 0.5s ease, opacity 0.22s ease;
 }
 
-.scroll-up-2 i:hover {
+.scroll-up-pg3 i:hover {
   transform: translateY(5px);
 }
 
-.scroll-up-2 i:active {
+.scroll-up-pg3 i:active {
   opacity: 0.5;
 }
 
-.scroll-down-3 {
+.scroll-down-pg3 {
   position: absolute;
   bottom: 75px;
   right: 9%;
 }
 
-.scroll-down-3 i {
+.scroll-down-pg3 i {
   display: block;
   padding: 15px;
   font-size: 25px;
@@ -321,11 +321,11 @@ section {
   transition: all 0.5s ease, opacity 0.22s ease;
 }
 
-.scroll-down-3 i:hover {
+.scroll-down-pg3 i:hover {
   transform: translateY(-5px);
 }
 
-.scroll-down-3 i:active {
+.scroll-down-pg3 i:active {
   opacity: 0.5;
 }
 
@@ -338,23 +338,23 @@ section {
     padding: 0 3%;
     transition: 0.2s;
   }
-  .scroll-down {
+  .scroll-down-pg1 {
     right: 3%;
     transition: 0.2s;
   }
-  .scroll-up {
+  .scroll-up-pg2 {
     right: 3%;
     transition: 0.2s;
   }
-  .scroll-down-2 {
+  .scroll-down-pg2 {
     right: 3%;
     transition: 0.2s;
   }
-  .scroll-up-2 {
+  .scroll-up-pg3 {
     right: 3%;
     transition: 0.2s;
   }
-  .scroll-down-3 {
+  .scroll-down-pg3 {
     right: 3%;
     transition: 0.2s;
   }
@@ -394,19 +394,19 @@ section {
   .icons {
     display: none;
   }
-  .scroll-down {
+  .scroll-down-pg1 {
     display: none;
   }
-  .scroll-up {
+  .scroll-up-pg2 {
     display: none;
   }
-  .scroll-down-2 {
+  .scroll-down-pg2 {
     display: none;
   }
-  .scroll-up-2 {
+  .scroll-up-pg3 {
     display: none;
   }
-  .scroll-down-3 {
+  .scroll-down-pg3 {
     display: none;
   }
   .navlist a {
