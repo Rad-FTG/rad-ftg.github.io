@@ -335,27 +335,27 @@ section {
     transition: 0.2s;
   }
   .icons {
-    padding: 0 3%;
+    padding: 0 6%;
     transition: 0.2s;
   }
   .scroll-down-pg1 {
-    right: 3%;
+    right: 6%;
     transition: 0.2s;
   }
   .scroll-up-pg2 {
-    right: 3%;
+    right: 6%;
     transition: 0.2s;
   }
   .scroll-down-pg2 {
-    right: 3%;
+    right: 6%;
     transition: 0.2s;
   }
   .scroll-up-pg3 {
-    right: 3%;
+    right: 6%;
     transition: 0.2s;
   }
   .scroll-down-pg3 {
-    right: 3%;
+    right: 6%;
     transition: 0.2s;
   }
   .hero-img img {
@@ -383,7 +383,7 @@ section {
     text-align: center;
   }
   .hero-img img {
-    width: 500px;
+    width: 50%;
     height: auto;
   }
   .hero {
@@ -443,12 +443,5 @@ section {
   }
   .navlist.open {
     right: 0;
-  }
-}
-
-@media (max-width: 640px) {
-  .hero-img img {
-    width: 80%;
-    height: auto;
   }
 }
