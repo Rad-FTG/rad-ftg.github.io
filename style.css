@@ -383,7 +383,7 @@ section {
     text-align: center;
   }
   .hero-img img {
-    width: 650px;
+    width: 500px;
     height: auto;
   }
   .hero {
@@ -446,9 +446,9 @@ section {
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 640px) {
   .hero-img img {
-    width: 100%;
+    width: 80%;
     height: auto;
   }
 }
