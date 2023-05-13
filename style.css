@@ -43,18 +43,18 @@ header {
   background: transparent;
 }
 
-.logo {
+.logo a {
   font-size: 50px;
   font-weight: 700;
   color: white;
   transition: all 0.55s ease, opacity 0.22s ease;
 }
 
-.logo:hover {
+.logo a:hover {
   opacity: 0.75;
 }
 
-.logo:active {
+.logo a:active {
   opacity: 0.5;
 }
 
@@ -365,31 +365,48 @@ section {
   .hero-text h1 {
     font-size: 75px;
     margin: 0 0 30px;
+    transition: 0.2s;
+  }
+  .hero-text h4 {
+    margin-bottom: 15px;
+    transition: 0.2s;
   }
   .hero-text h5 {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+    transition: 0.2s;
   }
 }
 
-@media (max-width: 1195px) {
+@media (max-width: 1200px) {
   section {
     padding: 0 3%;
     transition: 0.2s;
   }
-  .hero-text {
-    padding-top: 115px;
+  #menu-icon {
+    display: block;
   }
-  .hero-img {
-    text-align: center;
+  .navlist {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 300px;
+    height: 400px;
+    backdrop-filter: blur(15px);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 20px;
+    transition: all 0.55s ease;
   }
-  .hero-img img {
-    width: 50%;
-    height: auto;
+  .navlist a {
+    margin-left: 0;
+    display: block;
+    margin: 7px 0;
   }
-  .hero {
-    height: 100%;
-    gap: 1rem;
-    grid-template-columns: 1fr;
+  .navlist.open {
+    right: 0;
   }
   .icons {
     display: none;
@@ -417,31 +434,20 @@ section {
   }
 }
 
-@media (max-width: 1000px) {
-  #menu-icon {
-    display: block;
+@media (max-width: 720px) {
+  .hero-text {
+    padding-top: 115px;
   }
-  .navlist {
-    position: absolute;
-    top: 100%;
-    right: -100%;
-    width: 300px;
-    height: 40vh;
-    backdrop-filter: blur(15px);
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 50px 20px;
-    transition: all 0.55s ease;
+  .hero-img {
+    text-align: center;
   }
-  .navlist a {
-    margin-left: 0;
-    display: block;
-    margin: 7px 0;
+  .hero-img img {
+    width: 100%;
+    height: auto;
   }
-  .navlist.open {
-    right: 0;
+  .hero {
+    height: 100%;
+    gap: 1rem;
+    grid-template-columns: 1fr;
   }
 }
