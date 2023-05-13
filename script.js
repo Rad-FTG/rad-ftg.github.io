@@ -22,3 +22,5 @@ sr.reveal(".scroll-down", { delay: 250, origin: "right" });
 sr.reveal("#menu-icon", { delay: 250, origin: "right" });
 sr.reveal(".scroll-up", { delay: 250, origin: "right" });
 sr.reveal(".scroll-down-2", { delay: 250, origin: "right" });
+sr.reveal(".scroll-up-2", { delay: 250, origin: "right" });
+sr.reveal(".scroll-down-3", { delay: 250, origin: "right" });
