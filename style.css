@@ -7,6 +7,25 @@
   text-decoration: none;
 }
 
+::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #a3a3ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c7c7ff;
+  border-radius: 1rem;
+  border: 0.5rem solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6666ff;
+}
+
 header {
   position: fixed;
   right: 0;
@@ -21,9 +40,18 @@ header {
 }
 
 .logo {
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 700;
   color: white;
+  transition: all 0.55s ease, opacity 0.22s ease;
+}
+
+.logo:hover {
+  opacity: 0.75;
+}
+
+.logo:active {
+  opacity: 0.5;
 }
 
 .navlist {
@@ -33,19 +61,23 @@ header {
 .navlist a {
   color: white;
   margin-left: 60px;
-  font-size: 15px;
+  font-size: 30px;
   font-weight: 600;
   border-bottom: 2px solid transparent;
-  transition: all 0.55s ease;
+  transition: all 0.55s ease, opacity 0.22s ease;
 }
 
 .navlist a:hover {
   border-bottom: 2px solid white;
 }
 
+.navlist a:active {
+  opacity: 0.5;
+}
+
 #menu-icon {
   color: white;
-  font-size: 35px;
+  font-size: 50px;
   z-index: 10001;
   cursor: pointer;
   display: none;
@@ -65,7 +97,23 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  gap: 2rem;
+}
+
+.hero-2 {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(
+    294deg,
+    #c7c7ff 0%,
+    #a3a3ff 28.53%,
+    #6666ff 75.52%
+  );
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  /* gap: 10rem; */
 }
 
 section {
@@ -73,32 +121,37 @@ section {
 }
 
 .hero-text h5 {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 400;
   color: white;
   margin-bottom: 40px;
 }
 
-.hero-text h1 {
-  font-family: "Permanent Marker", cursive;
-  font-size: 90px;
-  line-height: 1;
-  color: white;
-  margin: 0 0 45px;
-}
-
 .hero-text h4 {
-  font-size: 18px;
+  font-size: 30px;
   font-weight: 600;
   color: white;
   margin-bottom: 10px;
 }
 
+.hero-text h1 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 100px;
+  line-height: 1;
+  color: white;
+  margin: 0 0 45px;
+}
+
 .hero-text p {
   color: white;
-  font-size: 15px;
+  font-size: 20px;
   line-height: 1.9;
   margin-bottom: 40px;
+}
+
+.hero-img {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-img img {
@@ -113,17 +166,20 @@ section {
   border: 1px solid transparent;
   padding: 12px 30px;
   line-height: 1.4;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 500;
   border-radius: 30px;
   text-transform: uppercase;
-  transition: all 0.55s ease;
+  transition: all 0.55s ease, opacity 0.22s ease;
 }
 
 .hero-text a:hover {
   background: transparent;
   border: 1px solid white;
-  transform: translateX(8px);
+}
+
+.hero-text a:active {
+  opacity: 0.5;
 }
 
 .icons {
@@ -136,14 +192,17 @@ section {
 .icons i {
   display: block;
   margin: 26px 0;
-  font-size: 24px;
+  font-size: 30px;
   color: white;
-  transition: all 0.5s ease;
+  transition: all 0.5s ease, opacity 0.22s ease;
 }
 
 .icons i:hover {
   color: #c7c7ff;
-  transform: translateY(-5px);
+}
+
+.icons i:active {
+  opacity: 0.5;
 }
 
 .scroll-down {
@@ -154,16 +213,20 @@ section {
 
 .scroll-down i {
   display: block;
-  padding: 12px;
+  padding: 15px;
   font-size: 25px;
   color: white;
   background: #c7c7ff;
-  border-radius: 30px;
-  transition: all 0.5s ease;
+  border-radius: 20px;
+  transition: all 0.5s ease, opacity 0.22s ease;
 }
 
 .scroll-down i:hover {
   transform: translateY(-5px);
+}
+
+.scroll-down i:active {
+  opacity: 0.5;
 }
 
 @media (max-width: 1535px) {
@@ -179,16 +242,6 @@ section {
     right: 3%;
     transition: 0.2s;
   }
-}
-
-@media (max-width: 1510px) {
-  section {
-    padding: 0 12%;
-    transition: 0.2s;
-  }
-}
-
-@media (max-width: 1340px) {
   .hero-img img {
     width: 100%;
     height: auto;
@@ -228,9 +281,15 @@ section {
   .scroll-down {
     display: none;
   }
+  .navlist a {
+    font-size: 20px;
+  }
+  .logo {
+    font-size: 40px;
+  }
 }
 
-@media (max-width: 990px) {
+@media (max-width: 1000px) {
   #menu-icon {
     display: block;
   }

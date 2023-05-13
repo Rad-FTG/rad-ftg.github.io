@@ -8,13 +8,13 @@ menu.onclick = () => {
 
 const sr = ScrollReveal({
   distance: "65px",
-  duration: 2600,
-  delay: 450,
-  reset: true,
+  duration: 3000,
+  delay: 500,
+  reset: false,
 });
 
-sr.reveal("header", { delay: 100, origin: "top" });
-sr.reveal(".hero-text", { delay: 200, origin: "top" });
-sr.reveal(".hero-img", { delay: 200, origin: "top" });
-sr.reveal(".icons", { delay: 200, origin: "left" });
-sr.reveal(".scroll-down", { delay: 200, origin: "right" });
+sr.reveal("header", { delay: 250, origin: "top" });
+sr.reveal(".hero-text", { delay: 250, origin: "top" });
+sr.reveal(".hero-img", { delay: 250, origin: "top" });
+sr.reveal(".icons", { delay: 250, origin: "left" });
+sr.reveal(".scroll-down", { delay: 250, origin: "right" });
