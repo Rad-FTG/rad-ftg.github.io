@@ -7,6 +7,10 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
   width: 1.5rem;
 }
@@ -87,12 +91,7 @@ header {
   height: 100%;
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(
-    245deg,
-    #c7c7ff 0%,
-    #a3a3ff 28.53%,
-    #6666ff 75.52%
-  );
+  background: linear-gradient(225deg, #c7c7ff 0%, #a3a3ff 25%, #6666ff 75%);
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -103,12 +102,7 @@ header {
   height: 100%;
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(
-    295deg,
-    #c7c7ff 0%,
-    #a3a3ff 28.53%,
-    #6666ff 75.52%
-  );
+  background: linear-gradient(315deg, #c7c7ff 0%, #a3a3ff 25%, #6666ff 75%);
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -226,6 +220,54 @@ section {
 }
 
 .scroll-down i:active {
+  opacity: 0.5;
+}
+
+.scroll-up {
+  position: absolute;
+  bottom: 12%;
+  right: 9%;
+}
+
+.scroll-up i {
+  display: block;
+  padding: 15px;
+  font-size: 25px;
+  color: white;
+  background: #c7c7ff;
+  border-radius: 20px;
+  transition: all 0.5s ease, opacity 0.22s ease;
+}
+
+.scroll-up i:hover {
+  transform: translateY(-5px);
+}
+
+.scroll-up i:active {
+  opacity: 0.5;
+}
+
+.scroll-down-2 {
+  position: absolute;
+  bottom: 6%;
+  right: 9%;
+}
+
+.scroll-down-2 i {
+  display: block;
+  padding: 15px;
+  font-size: 25px;
+  color: white;
+  background: #c7c7ff;
+  border-radius: 20px;
+  transition: all 0.5s ease, opacity 0.22s ease;
+}
+
+.scroll-down-2 i:hover {
+  transform: translateY(-5px);
+}
+
+.scroll-down-2 i:active {
   opacity: 0.5;
 }
 

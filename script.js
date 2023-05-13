@@ -13,10 +13,12 @@ const sr = ScrollReveal({
   reset: false,
 });
 
+sr.reveal(".logo", { delay: 250, origin: "top" });
 sr.reveal("header", { delay: 250, origin: "top" });
 sr.reveal(".hero-text", { delay: 250, origin: "top" });
 sr.reveal(".hero-img", { delay: 250, origin: "top" });
 sr.reveal(".icons", { delay: 250, origin: "left" });
 sr.reveal(".scroll-down", { delay: 250, origin: "right" });
 sr.reveal("#menu-icon", { delay: 250, origin: "right" });
-sr.reveal(".logo", { delay: 250, origin: "top" });
+sr.reveal(".scroll-up", { delay: 250, origin: "right" });
+sr.reveal(".scroll-down-2", { delay: 250, origin: "right" });
