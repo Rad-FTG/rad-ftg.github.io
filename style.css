@@ -119,6 +119,7 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  gap: 5rem;
 }
 
 section {
@@ -170,6 +171,17 @@ section {
 }
 
 .hero-map iframe {
+  border-radius: 30px;
+}
+
+.hero-ceo {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-ceo img {
+  width: 500px;
+  height: auto;
   border-radius: 30px;
 }
 
@@ -470,9 +482,20 @@ section {
     height: auto;
   }
   iframe {
-    height: 750px;
+    height: 500px;
     transition: all 0.55s;
   }
+  .hero-ceo {
+    text-align: center;
+  }
+  .hero-ceo img {
+    width: 400px;
+    transition: all 0.55s;
+  }
+  /* .hero-ceo img {
+    width: 80%;
+    height: auto;
+  } */
   .hero {
     height: 100%;
     gap: 1rem;
@@ -483,10 +506,19 @@ section {
     gap: 1rem;
     grid-template-columns: 1fr;
   }
+  .hero-3 {
+    height: 100%;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 425px) {
   iframe {
+    width: 300px;
+    transition: all 0.55s;
+  }
+  .hero-ceo img {
     width: 300px;
     transition: all 0.55s;
   }
