@@ -7,7 +7,7 @@ menu.onclick = () => {
 };
 
 const sr = ScrollReveal({
-  distance: "65px",
+  distance: "75px",
   duration: 3000,
   delay: 500,
   reset: false,
@@ -20,8 +20,11 @@ sr.reveal(".hero-img", { delay: 250, origin: "top" });
 sr.reveal(".icons", { delay: 250, origin: "left" });
 sr.reveal("#menu-icon", { delay: 250, origin: "top" });
 sr.reveal(".hero-map", { delay: 250, origin: "top" });
+sr.reveal(".hero-ceo", { delay: 250, origin: "top" });
 sr.reveal(".scroll-down-pg1", { delay: 250, origin: "right" });
 sr.reveal(".scroll-up-pg2", { delay: 250, origin: "right" });
 sr.reveal(".scroll-down-pg2", { delay: 250, origin: "right" });
 sr.reveal(".scroll-up-pg3", { delay: 250, origin: "right" });
 sr.reveal(".scroll-down-pg3", { delay: 250, origin: "right" });
+sr.reveal(".scroll-up-pg4", { delay: 250, origin: "right" });
+sr.reveal(".scroll-down-pg4", { delay: 250, origin: "right" });

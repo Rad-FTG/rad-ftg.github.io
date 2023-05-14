@@ -122,6 +122,18 @@ header {
   gap: 5rem;
 }
 
+.hero-4 {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(315deg, #c7c7ff 0%, #a3a3ff 25%, #6666ff 75%);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  /* gap: 10rem; */
+}
+
 section {
   padding: 0 19%;
 }
@@ -351,6 +363,54 @@ section {
   opacity: 0.5;
 }
 
+.scroll-up-pg4 {
+  position: absolute;
+  bottom: 150px;
+  right: 9%;
+}
+
+.scroll-up-pg4 i {
+  display: block;
+  padding: 15px;
+  font-size: 25px;
+  color: white;
+  background: #c7c7ff;
+  border-radius: 20px;
+  transition: all 0.5s ease, opacity 0.22s ease;
+}
+
+.scroll-up-pg4 i:hover {
+  transform: translateY(5px);
+}
+
+.scroll-up-pg4 i:active {
+  opacity: 0.5;
+}
+
+.scroll-down-pg4 {
+  position: absolute;
+  bottom: 75px;
+  right: 9%;
+}
+
+.scroll-down-pg4 i {
+  display: block;
+  padding: 15px;
+  font-size: 25px;
+  color: white;
+  background: #c7c7ff;
+  border-radius: 20px;
+  transition: all 0.5s ease, opacity 0.22s ease;
+}
+
+.scroll-down-pg4 i:hover {
+  transform: translateY(-5px);
+}
+
+.scroll-down-pg4 i:active {
+  opacity: 0.5;
+}
+
 @media (max-width: 1950px) {
   .hero-2 {
     gap: 3rem;
@@ -368,11 +428,9 @@ section {
 @media (max-width: 1535px) {
   header {
     padding: 15px 3%;
-    transition: 0.2s;
   }
   .icons {
     padding: 0 6%;
-    transition: 0.2s;
   }
   .scroll-down-pg1 {
     right: 6%;
@@ -391,6 +449,14 @@ section {
     transition: 0.2s;
   }
   .scroll-down-pg3 {
+    right: 6%;
+    transition: 0.2s;
+  }
+  .scroll-up-pg4 {
+    right: 6%;
+    transition: 0.2s;
+  }
+  .scroll-down-pg4 {
     right: 6%;
     transition: 0.2s;
   }
@@ -462,6 +528,12 @@ section {
   .scroll-down-pg3 {
     display: none;
   }
+  .scroll-up-pg4 {
+    display: none;
+  }
+  .scroll-down-pg4 {
+    display: none;
+  }
   .navlist a {
     font-size: 20px;
   }
@@ -507,6 +579,11 @@ section {
     grid-template-columns: 1fr;
   }
   .hero-3 {
+    height: 100%;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+  .hero-4 {
     height: 100%;
     gap: 1rem;
     grid-template-columns: 1fr;
