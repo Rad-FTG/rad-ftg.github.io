@@ -107,6 +107,7 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  gap: 10rem;
 }
 
 .hero-3 {
@@ -161,6 +162,15 @@ section {
 .hero-img img {
   width: 500px;
   height: auto;
+}
+
+.hero-map {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-map iframe {
+  border-radius: 30px;
 }
 
 .hero-text a {
@@ -329,6 +339,20 @@ section {
   opacity: 0.5;
 }
 
+@media (max-width: 1950px) {
+  .hero-2 {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 1850px) {
+  iframe {
+    width: 400px;
+    height: 300px;
+    transition: all 0.55s;
+  }
+}
+
 @media (max-width: 1535px) {
   header {
     padding: 15px 3%;
@@ -377,7 +401,7 @@ section {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   section {
     padding: 0 3%;
     transition: 0.2s;
@@ -434,7 +458,7 @@ section {
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 850px) {
   .hero-text {
     padding-top: 115px;
   }
@@ -442,12 +466,28 @@ section {
     text-align: center;
   }
   .hero-img img {
-    width: 100%;
+    width: 80%;
     height: auto;
+  }
+  iframe {
+    height: 750px;
+    transition: all 0.55s;
   }
   .hero {
     height: 100%;
     gap: 1rem;
     grid-template-columns: 1fr;
+  }
+  .hero-2 {
+    height: 100%;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 425px) {
+  iframe {
+    width: 300px;
+    transition: all 0.55s;
   }
 }
