@@ -37,7 +37,8 @@ html {
 }
 
 header {
-  position: fixed;
+  /* position: fixed; */
+  position: absolute;
   right: 0;
   top: 0;
   z-index: 2;
@@ -282,7 +283,7 @@ section {
 
 .scroll-down-pg1 {
   position: absolute;
-  bottom: 75px;
+  top: 50%;
   right: 9%;
 }
 
@@ -310,7 +311,7 @@ section {
 
 .scroll-up-pg2 {
   position: absolute;
-  bottom: 150px;
+  top: 45%;
   right: 9%;
 }
 
@@ -338,7 +339,7 @@ section {
 
 .scroll-down-pg2 {
   position: absolute;
-  bottom: 75px;
+  bottom: 45%;
   right: 9%;
 }
 
@@ -366,7 +367,7 @@ section {
 
 .scroll-up-pg3 {
   position: absolute;
-  bottom: 150px;
+  top: 45%;
   right: 9%;
 }
 
@@ -394,7 +395,7 @@ section {
 
 .scroll-down-pg3 {
   position: absolute;
-  bottom: 75px;
+  bottom: 45%;
   right: 9%;
 }
 
@@ -422,7 +423,7 @@ section {
 
 .scroll-up-pg4 {
   position: absolute;
-  bottom: 150px;
+  top: 45%;
   right: 9%;
 }
 
@@ -450,7 +451,7 @@ section {
 
 .scroll-down-pg4 {
   position: absolute;
-  bottom: 75px;
+  bottom: 45%;
   right: 9%;
 }
 
@@ -538,10 +539,17 @@ section {
     transition: 0.2s;
   }
   .hero-text h4 {
+    font-size: 20px;
     margin-bottom: 15px;
     transition: 0.2s;
   }
   .hero-text h5 {
+    font-size: 15px;
+    margin-bottom: 15px;
+    transition: 0.2s;
+  }
+  .hero-text p {
+    font-size: 15px;
     margin-bottom: 15px;
     transition: 0.2s;
   }
