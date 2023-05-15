@@ -40,7 +40,7 @@ header {
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 1000;
+  z-index: 2;
   width: 100%;
   display: flex;
   align-items: center;
@@ -53,7 +53,7 @@ header {
   font-size: 50px;
   font-weight: 700;
   color: white;
-  transition: all 0.55s ease;
+  transition: all 0.55s ease, border-bottom 0.22s ease;
 }
 
 .logo a:hover {
@@ -75,7 +75,7 @@ header {
   font-size: 30px;
   font-weight: 600;
   border-bottom: 2px solid transparent;
-  transition: all 0.55s ease;
+  transition: all 0.55s ease, border-bottom 0.22s ease;
 }
 
 .navlist a:hover {
@@ -90,7 +90,7 @@ header {
 #menu-icon {
   color: white;
   font-size: 50px;
-  z-index: 10001;
+  z-index: 3;
   cursor: pointer;
   display: none;
 }
@@ -667,5 +667,68 @@ section {
   .hero-ceo img {
     width: 300px;
     transition: all 0.55s;
+  }
+}
+
+#preloader {
+  background: linear-gradient(
+    45deg,
+    var(--bg-color-1) 25%,
+    var(--bg-color-2) 75%,
+    var(--bg-color-3) 100%
+  );
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 4;
+}
+
+.lds-ripple {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
   }
 }

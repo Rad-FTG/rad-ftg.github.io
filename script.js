@@ -1,3 +1,5 @@
+// telephone menu
+
 let menu = document.querySelector("#menu-icon");
 let navlist = document.querySelector(".navlist");
 
@@ -5,6 +7,14 @@ menu.onclick = () => {
   menu.classList.toggle("bx-x");
   navlist.classList.toggle("open");
 };
+
+// preloader
+
+var loader = document.getElementById("preloader");
+
+window.addEventListener("load", function () {
+  loader.style.display = "none";
+});
 
 const sr = ScrollReveal({
   distance: "50px",
