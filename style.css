@@ -282,8 +282,9 @@ section {
   opacity: 0.5;
 }
 
-.scroll-down-pg1 {
+/* .scroll-down-pg1 {
   position: absolute;
+  bottom: 75px;
   top: 50%;
   right: 9%;
 }
@@ -312,6 +313,7 @@ section {
 
 .scroll-up-pg2 {
   position: absolute;
+  bottom: 150px;
   top: 45%;
   right: 9%;
 }
@@ -340,6 +342,7 @@ section {
 
 .scroll-down-pg2 {
   position: absolute;
+  bottom: 75px;
   bottom: 45%;
   right: 9%;
 }
@@ -368,6 +371,7 @@ section {
 
 .scroll-up-pg3 {
   position: absolute;
+  bottom: 150px;
   top: 45%;
   right: 9%;
 }
@@ -396,6 +400,7 @@ section {
 
 .scroll-down-pg3 {
   position: absolute;
+  bottom: 75px;
   bottom: 45%;
   right: 9%;
 }
@@ -424,6 +429,7 @@ section {
 
 .scroll-up-pg4 {
   position: absolute;
+  bottom: 150px;
   top: 45%;
   right: 9%;
 }
@@ -452,6 +458,7 @@ section {
 
 .scroll-down-pg4 {
   position: absolute;
+  bottom: 75px;
   bottom: 45%;
   right: 9%;
 }
@@ -476,7 +483,7 @@ section {
 
 .scroll-down-pg4 i:active {
   opacity: 0.5;
-}
+} */
 
 @media (max-width: 1800px) {
   .hero-2 {
