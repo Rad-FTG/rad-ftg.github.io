@@ -290,16 +290,18 @@ section {
   display: block;
   padding: 15px;
   font-size: 25px;
-  color: var(--bg-color-1);
-  background: var(--bg-color-2);
-  border: 2px solid var(--bg-color-1);
+  color: var(--bg-color-2);
+  background: var(--bg-color-3);
+  border: 2px solid var(--bg-color-2);
   border-radius: 20px;
   transition: all 0.5s ease, opacity 0.22s ease;
 }
 
 .scroll-down-pg1 i:hover {
   transform: translateY(-5px);
-  background: var(--bg-color-3);
+  color: var(--bg-color-1);
+  background: var(--bg-color-2);
+  border: 2px solid var(--bg-color-1);
 }
 
 .scroll-down-pg1 i:active {
@@ -316,16 +318,18 @@ section {
   display: block;
   padding: 15px;
   font-size: 25px;
-  color: var(--bg-color-1);
-  background: var(--bg-color-2);
-  border: 2px solid var(--bg-color-1);
+  color: var(--bg-color-2);
+  background: var(--bg-color-3);
+  border: 2px solid var(--bg-color-2);
   border-radius: 20px;
   transition: all 0.5s ease, opacity 0.22s ease;
 }
 
 .scroll-up-pg2 i:hover {
   transform: translateY(5px);
-  background: var(--bg-color-3);
+  color: var(--bg-color-1);
+  background: var(--bg-color-2);
+  border: 2px solid var(--bg-color-1);
 }
 
 .scroll-up-pg2 i:active {
@@ -342,16 +346,18 @@ section {
   display: block;
   padding: 15px;
   font-size: 25px;
-  color: var(--bg-color-1);
-  background: var(--bg-color-2);
-  border: 2px solid var(--bg-color-1);
+  color: var(--bg-color-2);
+  background: var(--bg-color-3);
+  border: 2px solid var(--bg-color-2);
   border-radius: 20px;
   transition: all 0.5s ease, opacity 0.22s ease;
 }
 
 .scroll-down-pg2 i:hover {
   transform: translateY(-5px);
-  background: var(--bg-color-3);
+  color: var(--bg-color-1);
+  background: var(--bg-color-2);
+  border: 2px solid var(--bg-color-1);
 }
 
 .scroll-down-pg2 i:active {
@@ -368,16 +374,18 @@ section {
   display: block;
   padding: 15px;
   font-size: 25px;
-  color: var(--bg-color-1);
-  background: var(--bg-color-2);
-  border: 2px solid var(--bg-color-1);
+  color: var(--bg-color-2);
+  background: var(--bg-color-3);
+  border: 2px solid var(--bg-color-2);
   border-radius: 20px;
   transition: all 0.5s ease, opacity 0.22s ease;
 }
 
 .scroll-up-pg3 i:hover {
   transform: translateY(5px);
-  background: var(--bg-color-3);
+  color: var(--bg-color-1);
+  background: var(--bg-color-2);
+  border: 2px solid var(--bg-color-1);
 }
 
 .scroll-up-pg3 i:active {
@@ -394,16 +402,18 @@ section {
   display: block;
   padding: 15px;
   font-size: 25px;
-  color: var(--bg-color-1);
-  background: var(--bg-color-2);
-  border: 2px solid var(--bg-color-1);
+  color: var(--bg-color-2);
+  background: var(--bg-color-3);
+  border: 2px solid var(--bg-color-2);
   border-radius: 20px;
   transition: all 0.5s ease, opacity 0.22s ease;
 }
 
 .scroll-down-pg3 i:hover {
   transform: translateY(-5px);
-  background: var(--bg-color-3);
+  color: var(--bg-color-1);
+  background: var(--bg-color-2);
+  border: 2px solid var(--bg-color-1);
 }
 
 .scroll-down-pg3 i:active {
@@ -420,16 +430,18 @@ section {
   display: block;
   padding: 15px;
   font-size: 25px;
-  color: var(--bg-color-1);
-  background: var(--bg-color-2);
-  border: 2px solid var(--bg-color-1);
+  color: var(--bg-color-2);
+  background: var(--bg-color-3);
+  border: 2px solid var(--bg-color-2);
   border-radius: 20px;
   transition: all 0.5s ease, opacity 0.22s ease;
 }
 
 .scroll-up-pg4 i:hover {
   transform: translateY(5px);
-  background: var(--bg-color-3);
+  color: var(--bg-color-1);
+  background: var(--bg-color-2);
+  border: 2px solid var(--bg-color-1);
 }
 
 .scroll-up-pg4 i:active {
@@ -446,16 +458,18 @@ section {
   display: block;
   padding: 15px;
   font-size: 25px;
-  color: var(--bg-color-1);
-  background: var(--bg-color-2);
-  border: 2px solid var(--bg-color-1);
+  color: var(--bg-color-2);
+  background: var(--bg-color-3);
+  border: 2px solid var(--bg-color-2);
   border-radius: 20px;
   transition: all 0.5s ease, opacity 0.22s ease;
 }
 
 .scroll-down-pg4 i:hover {
   transform: translateY(-5px);
-  background: var(--bg-color-3);
+  color: var(--bg-color-1);
+  background: var(--bg-color-2);
+  border: 2px solid var(--bg-color-1);
 }
 
 .scroll-down-pg4 i:active {
