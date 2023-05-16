@@ -695,11 +695,6 @@ section {
     margin-left: auto;
     margin-right: auto;
   }
-  .div2 img {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-  }
   .div2 p {
     padding: 0 19%;
   }
@@ -708,11 +703,6 @@ section {
     margin-left: auto;
     margin-right: auto;
   }
-  .div3 img {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-  }
   .div3 p {
     padding: 0 19%;
   }
@@ -720,11 +710,6 @@ section {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-  }
-  .div4 img {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
   }
   .div4 p {
     padding: 0 19%;
