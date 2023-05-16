@@ -577,14 +577,19 @@ section {
     right: -100%;
     width: 300px;
     height: 300px;
-    backdrop-filter: blur(15px);
+    /* Nie da sie kurwa dać backdrop bo kurwa jest juz w headerze */
+    background: linear-gradient(
+      45deg,
+      var(--bg-color-1) 25%,
+      var(--bg-color-2) 75%,
+      var(--bg-color-3) 100%
+    );
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 50px 20px;
-    border: 3px solid white;
     transition: all 0.55s ease;
   }
   .navlist a {
