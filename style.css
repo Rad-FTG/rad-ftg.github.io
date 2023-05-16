@@ -230,7 +230,7 @@ section {
 }
 
 .hero-ceo img {
-  width: 500px;
+  width: 400px;
   height: auto;
   border-radius: 30px;
 }
@@ -651,7 +651,7 @@ section {
     text-align: center;
   }
   .hero-ceo img {
-    width: 400px;
+    width: 350px;
     transition: all 0.55s;
   }
   /* .hero-ceo img {
