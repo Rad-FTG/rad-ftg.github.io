@@ -19,21 +19,29 @@ window.addEventListener("load", function () {
 // gdzie ta muza kur
 
 const whereisthismusic = document.querySelector(".logo");
+let lastClickTime = 0;
 
 whereisthismusic.onclick = () => {
-  function playSound(audioName) {
-    let audio = new Audio(audioName);
-    audio.loop = false;
-    audio.play();
+  const currentTime = new Date().getTime();
+  const elapsedTime = currentTime - lastClickTime;
+
+  if (elapsedTime >= 10000) {
+    function playSound(audioName) {
+      let audio = new Audio(audioName);
+      audio.loop = false;
+      audio.play();
+    }
+    playSound("audio/Where-is-this-music.mp3");
+
+    // zmiana loga
+    document.getElementById("changeText").innerHTML = "Where is this music?!";
+
+    setTimeout(function () {
+      document.getElementById("changeText").innerHTML = "RAD-FTG";
+    }, 10000);
+
+    lastClickTime = currentTime;
   }
-  playSound("audio/Where-is-this-music.mp3");
-
-  // zmiana loga
-  document.getElementById("changeText").innerHTML = "Where is this music?!";
-
-  setTimeout(function () {
-    document.getElementById("changeText").innerHTML = "RAD-FTG";
-  }, 10000);
 };
 
 // scroll reveal
