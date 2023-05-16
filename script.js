@@ -16,6 +16,28 @@ window.addEventListener("load", function () {
   loader.style.display = "none";
 });
 
+// gdzie ta muza kur
+
+const whereisthismusic = document.querySelector(".logo");
+
+whereisthismusic.onclick = () => {
+  function playSound(audioName) {
+    let audio = new Audio(audioName);
+    audio.loop = false;
+    audio.play();
+  }
+  playSound("audio/Where-is-this-music.mp3");
+
+  // zmiana loga
+  document.getElementById("changeText").innerHTML = "Where is this music?!";
+
+  setTimeout(function () {
+    document.getElementById("changeText").innerHTML = "RAD-FTG";
+  }, 10000);
+};
+
+// scroll reveal
+
 const sr = ScrollReveal({
   distance: "50px",
   duration: 3000,
