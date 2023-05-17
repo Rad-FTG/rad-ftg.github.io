@@ -46,17 +46,106 @@ whereisthismusic.onclick = () => {
 
 // Board easter egg
 
-const lc = document.querySelector("#lc");
-lc.onclick = () => {
-  function playSound(audioName) {
-    let audio = new Audio(audioName);
-    audio.loop = false;
-    audio.play();
-  }
-  playSound("audio/lc.mp3");
+const hc = document.querySelector("#hc");
+let lastClickTimeHC = 0;
 
-  document.getElementById("board-js").innerHTML = "Siema";
+hc.onclick = () => {
+  const currentTimeHC = new Date().getTime();
+  const elapsedTimeHC = currentTimeHC - lastClickTimeHC;
+
+  if (elapsedTimeHC >= 1000) {
+    function playSound(audioName) {
+      let audio = new Audio(audioName);
+      audio.loop = false;
+      audio.play();
+    }
+    playSound("audio/hc.mp3");
+
+    // zmiana loga
+    document.getElementById("board-js").innerHTML = "Hugh Cook";
+
+    setTimeout(function () {
+      document.getElementById("board-js").innerHTML = "Board";
+    }, 1000);
+
+    lastClickTimeHC = currentTimeHC;
+  }
 };
+
+const lc = document.querySelector("#lc");
+let lastClickTimeLC = 0;
+
+lc.onclick = () => {
+  const currentTimeLC = new Date().getTime();
+  const elapsedTimeLC = currentTimeLC - lastClickTimeLC;
+
+  if (elapsedTimeLC >= 1000) {
+    function playSound(audioName) {
+      let audio = new Audio(audioName);
+      audio.loop = false;
+      audio.play();
+    }
+    playSound("audio/lc.mp3");
+
+    // zmiana loga
+    document.getElementById("board-js").innerHTML = "Lenny Cook";
+
+    setTimeout(function () {
+      document.getElementById("board-js").innerHTML = "Board";
+    }, 1000);
+
+    lastClickTimeLC = currentTimeLC;
+  }
+};
+
+const sc = document.querySelector("#sc");
+let lastClickTimeSC = 0;
+
+sc.onclick = () => {
+  const currentTimeSC = new Date().getTime();
+  const elapsedTimeSC = currentTimeSC - lastClickTimeSC;
+
+  if (elapsedTimeSC >= 1000) {
+    function playSound(audioName) {
+      let audio = new Audio(audioName);
+      audio.loop = false;
+      audio.play();
+    }
+    playSound("audio/sc.mp3");
+
+    // zmiana loga
+    document.getElementById("board-js").innerHTML = "Smol Cook";
+
+    setTimeout(function () {
+      document.getElementById("board-js").innerHTML = "Board";
+    }, 1000);
+
+    lastClickTimeSC = currentTimeSC;
+  }
+};
+
+// cookie alert
+
+const cookieBox = document.querySelector(".wrapper"),
+  acceptBtn = cookieBox.querySelector("button");
+acceptBtn.onclick = () => {
+  //setting cookie for 1 month, after one month it'll be expired automatically
+  document.cookie = "CookieBy=CodingNepal; max-age=" + 60 * 60 * 24 * 30;
+  if (document.cookie) {
+    //if cookie is set
+    cookieBox.classList.add("hide"); //hide cookie box
+  } else {
+    //if cookie not set then alert an error
+    alert(
+      "Cookie can't be set! Please unblock this site from the cookie setting of your browser."
+    );
+  }
+};
+let checkCookie = document.cookie.indexOf("CookieBy=CodingNepal"); //checking our cookie
+//if cookie is set then hide the cookie box else show it
+checkCookie != -1
+  ? cookieBox.classList.add("hide")
+  : cookieBox.classList.remove("hide");
 
 // scroll reveal
 
