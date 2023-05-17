@@ -44,6 +44,20 @@ whereisthismusic.onclick = () => {
   }
 };
 
+// Board easter egg
+
+const lc = document.querySelector("#lc");
+lc.onclick = () => {
+  function playSound(audioName) {
+    let audio = new Audio(audioName);
+    audio.loop = false;
+    audio.play();
+  }
+  playSound("audio/lc.mp3");
+
+  document.getElementById("board-js").innerHTML = "Siema";
+};
+
 // scroll reveal
 
 const sr = ScrollReveal({
