@@ -46,83 +46,56 @@ whereisthismusic.onclick = () => {
 
 // Board easter egg
 
-const hc = document.querySelector("#hc");
-let lastClickTimeHC = 0;
+const clickHandler = (() => {
+  let lastClickTime = 0;
+  let isCodeRunning = false;
 
-hc.onclick = () => {
-  const currentTimeHC = new Date().getTime();
-  const elapsedTimeHC = currentTimeHC - lastClickTimeHC;
-
-  if (elapsedTimeHC >= 1000) {
-    function playSound(audioName) {
-      let audio = new Audio(audioName);
-      audio.loop = false;
-      audio.play();
-    }
-    playSound("audio/hc.mp3");
-
-    // zmiana loga
-    document.getElementById("board-js").innerHTML = "Hugh Cook";
-
-    setTimeout(function () {
-      document.getElementById("board-js").innerHTML = "Board";
-    }, 1000);
-
-    lastClickTimeHC = currentTimeHC;
+  function playSound(audioName) {
+    let audio = new Audio(audioName);
+    audio.loop = false;
+    audio.play();
   }
-};
+
+  function handleClick(elementId, audioFile, label) {
+    const currentTime = new Date().getTime();
+    const elapsedTime = currentTime - lastClickTime;
+
+    if (!isCodeRunning && elapsedTime >= 1000) {
+      isCodeRunning = true;
+      playSound(audioFile);
+
+      document.getElementById("board-js").innerHTML = label;
+
+      setTimeout(function () {
+        document.getElementById("board-js").innerHTML = "Board";
+        isCodeRunning = false;
+      }, 1000);
+
+      lastClickTime = currentTime;
+    }
+  }
+
+  return {
+    hcClick: () => {
+      handleClick("#hc", "audio/hc.mp3", "HC");
+    },
+    lcClick: () => {
+      handleClick("#lc", "audio/lc.mp3", "LC");
+    },
+    scClick: () => {
+      handleClick("#sc", "audio/sc.mp3", "SC");
+    },
+  };
+})();
+
+const hc = document.querySelector("#hc");
+hc.onclick = clickHandler.hcClick;
 
 const lc = document.querySelector("#lc");
-let lastClickTimeLC = 0;
-
-lc.onclick = () => {
-  const currentTimeLC = new Date().getTime();
-  const elapsedTimeLC = currentTimeLC - lastClickTimeLC;
-
-  if (elapsedTimeLC >= 1000) {
-    function playSound(audioName) {
-      let audio = new Audio(audioName);
-      audio.loop = false;
-      audio.play();
-    }
-    playSound("audio/lc.mp3");
-
-    // zmiana loga
-    document.getElementById("board-js").innerHTML = "Lenny Cook";
-
-    setTimeout(function () {
-      document.getElementById("board-js").innerHTML = "Board";
-    }, 1000);
-
-    lastClickTimeLC = currentTimeLC;
-  }
-};
+lc.onclick = clickHandler.lcClick;
 
 const sc = document.querySelector("#sc");
-let lastClickTimeSC = 0;
-
-sc.onclick = () => {
-  const currentTimeSC = new Date().getTime();
-  const elapsedTimeSC = currentTimeSC - lastClickTimeSC;
-
-  if (elapsedTimeSC >= 1000) {
-    function playSound(audioName) {
-      let audio = new Audio(audioName);
-      audio.loop = false;
-      audio.play();
-    }
-    playSound("audio/sc.mp3");
-
-    // zmiana loga
-    document.getElementById("board-js").innerHTML = "Smol Cook";
-
-    setTimeout(function () {
-      document.getElementById("board-js").innerHTML = "Board";
-    }, 1000);
-
-    lastClickTimeSC = currentTimeSC;
-  }
-};
+sc.onclick = clickHandler.scClick;
 
 // cookie alert
 
