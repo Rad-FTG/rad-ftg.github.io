@@ -60,12 +60,43 @@
         <li><a href="#about">About us</a></li>
         <li><a href="#board">Board</a></li>
         <li><a href="#contact">Contact</a></li>
-        <!-- <li><a href="#">null</a></li>
-        <li><a href="#">null</a></li> -->
+        <li><a href="#" onclick="showLoginPage()">Login</a></li>
       </ul>
 
       <div class="bx bx-menu" id="menu-icon"></div>
     </header>
+
+    <div class="backdrop" onclick="hideLoginPage()"></div>
+    <div class="login-page">
+      <h1>Login Page</h1>
+      <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required /><br /><br />
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+        /><br /><br />
+
+        <input type="submit" value="Login" onclick="saveLoginData()" />
+      </form>
+    </div>
+
+    <div class="jebanakurwa" onclick="hidePricePage()"></div>
+    <div class="price-page">
+      <h1>Price Page</h1>
+      <form>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia
+          corrupti nulla exercitationem aut facilis dolorum voluptates veniam.
+          Et sequi commodi expedita velit eos, eaque molestiae recusandae
+          veritatis laborum iusto inventore.
+        </p>
+      </form>
+    </div>
 
     <section class="hero" id="home">
       <div class="hero-text">
@@ -271,6 +302,12 @@
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
+
+      <!-- <div class="hero-text-last-tel">
+        <p><a href="privacy-policy.html" target="_blank">Privacy Policy</a></p>
+        <p><a>© 2023 Copyright: Rad - For The Glass</a></p>
+        <p><a href="cookie-policy.html" target="_blank">Cookie Policy</a></p>
+      </div> -->
 
       <!-- <div class="hero-ceo">
         <img src="images/ceo.jpg" />

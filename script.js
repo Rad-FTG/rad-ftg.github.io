@@ -120,6 +120,123 @@ checkCookie != -1
   ? cookieBox.classList.add("hide")
   : cookieBox.classList.remove("hide");
 
+// Login page
+
+var loggedInUser = localStorage.getItem("username");
+
+function showLoginPage() {
+  document.querySelector(".backdrop").style.display = "block";
+  document.querySelector(".login-page").style.display = "block";
+}
+
+function hideLoginPage() {
+  document.querySelector(".backdrop").style.display = "none";
+  document.querySelector(".login-page").style.display = "none";
+}
+
+function showPricePage() {
+  document.querySelector(".jebanakurwa").style.display = "block";
+  document.querySelector(".price-page").style.display = "block";
+}
+
+function hidePricePage() {
+  document.querySelector(".jebanakurwa").style.display = "none";
+  document.querySelector(".price-page").style.display = "none";
+}
+
+function saveLoginData() {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+
+  localStorage.setItem("username", username);
+  localStorage.setItem("password", password);
+
+  // Sprawdzenie poprawności logowania i odpowiednie działania
+
+  // Jeśli logowanie jest prawidłowe
+  loggedInUser = username;
+  updateNavigation();
+  hideLoginPage();
+}
+
+function logout() {
+  localStorage.removeItem("username");
+  localStorage.removeItem("password");
+
+  // Jeśli wylogowano
+  loggedInUser = null;
+  updateNavigation();
+}
+
+function updateNavigation() {
+  var navlist = document.querySelector(".navlist");
+
+  // Usuń istniejące elementy nawigacyjne
+  while (navlist.firstChild) {
+    navlist.removeChild(navlist.firstChild);
+  }
+
+  // Dodaj elementy nawigacyjne w zależności od stanu logowania
+  var navigationItems = [
+    { text: "Home Page", href: "#home" },
+    { text: "About us", href: "#about" },
+    { text: "Board", href: "#board" },
+    { text: "Contact", href: "#contact" },
+  ];
+
+  if (loggedInUser) {
+    // Jeśli zalogowano
+    for (var i = 0; i < navigationItems.length; i++) {
+      var item = navigationItems[i];
+      var listItem = document.createElement("li");
+      var link = document.createElement("a");
+      link.textContent = item.text;
+      link.href = item.href;
+      listItem.appendChild(link);
+      navlist.appendChild(listItem);
+    }
+
+    // Dodaj przycisk "Sign out"
+    var PriceItem = document.createElement("li");
+    var PriceLink = document.createElement("a");
+    PriceLink.textContent = "Price";
+    PriceLink.addEventListener("click", showPricePage);
+    PriceItem.appendChild(PriceLink);
+    navlist.appendChild(PriceItem);
+
+    // Dodaj przycisk "Sign out"
+    var signOutItem = document.createElement("li");
+    var signOutLink = document.createElement("a");
+    signOutLink.textContent = "Sign out";
+    signOutLink.onclick = logout;
+    signOutItem.appendChild(signOutLink);
+    navlist.appendChild(signOutItem);
+  } else {
+    // Jeśli nie zalogowano
+    for (var i = 0; i < navigationItems.length; i++) {
+      var item = navigationItems[i];
+      var listItem = document.createElement("li");
+      var link = document.createElement("a");
+      link.textContent = item.text;
+      link.href = item.href;
+      listItem.appendChild(link);
+      navlist.appendChild(listItem);
+    }
+
+    // Dodaj przycisk "Login"
+    var loginItem = document.createElement("li");
+    var loginLink = document.createElement("a");
+    loginLink.textContent = "Login";
+    loginLink.href = "#";
+    loginLink.onclick = showLoginPage;
+    loginItem.appendChild(loginLink);
+    navlist.appendChild(loginItem);
+  }
+}
+
+// Aktualizuj nawigację przy załadowaniu strony
+updateNavigation();
+
 // scroll reveal
 
 const sr = ScrollReveal({
