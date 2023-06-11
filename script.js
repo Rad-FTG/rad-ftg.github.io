@@ -122,6 +122,10 @@ checkCookie != -1
 
 // Login page
 
+function wyswietlKomunikat() {
+  alert("Logowanie udane! Witaj w naszym serwisie!");
+}
+
 var loggedInUser = localStorage.getItem("username");
 
 function showLoginPage() {
@@ -158,6 +162,8 @@ function saveLoginData() {
   updateNavigation();
   hideLoginPage();
 }
+
+wyswietlKomunikat();
 
 function logout() {
   localStorage.removeItem("username");
